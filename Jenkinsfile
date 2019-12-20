@@ -1,10 +1,25 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('Preparation') {
             steps {
-                echo 'Hello world - Jenkinsfile Pipeline..!' 
+                echo 'Jenkinsfile Pipeline - Preparation Phase..!' 
             }
         }
+        stage('Build') {
+            steps {
+                echo 'Jenkinsfile Pipeline - Build Phase..!' 
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Jenkinsfile Pipeline - Test Phase..!' 
+            }
+        }
+        stage('Deployment') {
+            steps {
+                echo 'Jenkinsfile Pipeline - Deployment Phase..!' 
+            }
+        }       
     }
 }
